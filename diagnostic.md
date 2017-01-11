@@ -5,19 +5,19 @@ Record your responses inside the fenced code blocks below each question.
 1.  Give an example of a visual hierarchy that could be modeled with components. Explain why each piece might be it's own component.
 
     ```md
-    <!-- your response here -->
+    Image list might have an /images/imageId/picture path on which each picture has an edit button and delete each button could be a componant.
     ```
 
 1.  What is the command to generate a new component called '`my-map`'?
 
     ```sh
-    # your response here
+ember g component my-map
     ```
 
 1.  What files are created and/or edited to produce a component, and what are their responsibilities?
 
     ```md
-    <!-- your response here -->
+the component.js is repsonsible for handling actions to bubble up the template renders them. Each piece the action passes on its way to the route is edited in a similar fasction and the routes are edited to hangle the request/whatever the action is doing.
     ```
 
 1.  Suppose you have a component '`my-contact`', which is loaded from
@@ -25,7 +25,7 @@ Record your responses inside the fenced code blocks below each question.
     the syntax (code that is written) to render this component inside that template?
 
     ```html
-    <!-- your response here -->
+        {{contacts}}
     ```
 
 1.  Each contact has multiple phone numbers. Suppose you also have '`my-phone`'
@@ -34,5 +34,7 @@ Record your responses inside the fenced code blocks below each question.
     pass it data?
 
     ```html
-    <!-- your response here -->
-    ```
+{{#each model as |contact|}}
+{{contacts/my-contact contact="contact"}}
+{{/each}}   
+```
